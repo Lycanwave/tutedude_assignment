@@ -1,0 +1,19 @@
+.secondNavbar-container{
+    /* background-color: white; */
+    display: flex;
+    height: 75.97px;
+    align-items: center;
+}
+
+.secondNavbar-text-element{
+    margin-left: 187px;
+    /* color: purple; */
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 964px){
+    .secondNavbar-text-element{
+        margin-left: 18px;
+    }
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import EnrollmentScreen from "./components/enrollmentScreen";
+import HomePage from "./components/homePage";
+import Navbar from "./components/navbar";
+import SecondNavbar from "./components/secondNavbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const routes = [
+    {
+        path: "/",
+        element: <HomePage />,
+    },
+    {
+        path: "/refer",
+        element: <EnrollmentScreen />,
+    },
+];
+
+const router = createBrowserRouter(routes);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Navbar></Navbar>
+            <SecondNavbar />
+            <RouterProvider router={router}></RouterProvider>
+        </>
+    );
 }
 
 export default App;
