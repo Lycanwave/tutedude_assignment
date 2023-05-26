@@ -1,6 +1,5 @@
 import React from "react";
 import "./homePage.css";
-import invite_friend from "../assets/invite_friend.svg";
 import { inviteFriend } from "../enrolledData.js";
 
 function HomePage() {
